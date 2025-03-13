@@ -6,9 +6,9 @@ RepairMate is a comprehensive web application designed to streamline machine tro
 
 ```
 repairmate/
-├── repairmate_backend/    # Django backend
-├── repairmate_dashboard/  # React dashboard
-└── repairmate_landingpage/ # HTML/CSS landing page
+├── repairmate_backend/     # Django - backend
+├── repairmate_dashboard/   # React - dashboard
+└── repairmate_landingpage/ # HTML/CSS/Javascript- landing page
 ```
 
 ## Features
@@ -20,8 +20,8 @@ repairmate/
 ## Technologies Used
 
 - Backend: Python, Django, Django REST Framework, PostgreSQL
-- Dashboard: React, JavaScript, HTML, CSS
-- Landing Page: HTML5, CSS3
+- Dashboard: React, Vite, JavaScript, HTML, CSS
+- Landing Page: HTML5, CSS3, JavaScript
 
 ## RepairMate Backend
 
@@ -78,7 +78,7 @@ For more detailed information about the backend, refer to the [Backend README](r
 
 4. Build for production:
    ```
-   npm run build
+   npm run build:django
    ```
 
 ## RepairMate Landing Page
