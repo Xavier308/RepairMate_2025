@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% block title %}{{ machine.name }} - RepairMate{% endblock %}
+{% block content %}
+<h1>{{ machine.name }}</h1>
+<div class="machine-details">
+    <img src="{{ machine.get_image_url }}" alt="{{ machine.name }}" class="machine-image-large">
+    <p><strong>Model:</strong> {{ machine.model }}</p>
+    <p><strong>Category:</strong> {{ machine.category.category_name }}</p>
+    <p><strong>Manufacturer:</strong> {{ machine.manufacturer.name }}</p>
+</div>
+
+<h2>Troubleshooting Guides</h2>
+<form method="get">
+    <input type="text" name="search" placeholder="Search guides" value="{{ search_query }}">
+    <button type="submit">Search</button>
+</form>
+
+<div class="troubleshooting-guides">
+    {% for guide in guides %}
+    <div class="guide">
+        <h3>{{ guide.code }}: {{ guide.problem_description }}</h3>
+        <p><strong>Possible Solutions:</strong> {{ guide.possible_solutions }}</p>
+    </div>
+    {% empty %}
+    <p>No troubleshooting guides available for this machine.</p>
+    {% endfor %}
+</div>
+{% endblock %}

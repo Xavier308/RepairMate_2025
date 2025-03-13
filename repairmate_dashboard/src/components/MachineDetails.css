@@ -1,0 +1,579 @@
+.machine-details-container {
+  min-height: calc(100vh - 80px);
+  overflow-y: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.machine-details-content {
+  display: flex;
+  gap: 20px;
+}
+
+.machine-image-card {
+  flex: 1;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.machine-info-card {
+  flex: 1;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.machine-image-card {
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
+
+.machine-header2 {
+  background: linear-gradient(to right, #061025, #2a354a);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.machine-header2 h1 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 24px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.machine-header-icon2 {
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.machine-header-icon2:hover {
+  transform: scale(1.2);
+}
+
+.icon-FaMagic {
+  color: #ffe868;
+}
+
+.icon-FaMagic:hover {
+  color: #FFD700;
+}
+
+.icon-bookmark, .icon-lock {
+  color: #cccccc;
+}
+
+.machine-details-image {
+  position: relative;
+}
+
+.machine-details-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.manual-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(46, 226, 142, 0.8);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.manual-button:hover {
+  background-color: rgb(181, 241, 42);
+}
+
+.manual-button svg {
+  margin-right: 5px;
+}
+
+.machine-details-info {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 280px);
+  scrollbar-width: thin;
+  scrollbar-color: #b8bbbb #f1f1f1;  /* for Firefox */
+}
+
+/* webkit (Chrome, Safari, Edge) */
+.machine-details-info::-webkit-scrollbar {
+  width: 6px;
+}
+
+.machine-details-info::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.machine-details-info::-webkit-scrollbar-thumb {
+  background: #0ca589;
+  border-radius: 3px;
+}
+
+.machine-details-info::-webkit-scrollbar-thumb:hover {
+  background: #0b967c;
+}
+
+
+.machine-details-info h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.machine-details-info p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.machine-details-info p strong {
+  color: #333;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 20px 0 0;
+}
+
+.action-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0b967c;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #0b967c;
+}
+
+/* Testing config for option button*/
+.action-buttons-machine-details {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: transparent;
+  color: #0b967c;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.action-buttons-machine-details:hover {
+  color: #097a63;
+}
+
+.delete-button {
+  background-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.options-button {
+  position: relative;
+}
+
+.options-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+  width: 200px;
+}
+
+
+.action-buttons-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
+.options-menu button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.options-menu button:hover {
+  background-color: #f8f9fa;
+}
+
+.options-menu button svg {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .machine-details-content {
+    flex-direction: column;
+  }
+
+  .machine-image-card {
+    position: static;
+  }
+}
+
+
+
+.manual-upload-handler {
+  margin-top: 15px;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0ca589;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-label:hover {
+  background-color: #0b967c;
+}
+
+.manual-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.manual-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.manual-actions button:not(.delete-button) {
+  background-color: #0ca589;
+  color: white;
+}
+
+.manual-actions button.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.manual-actions button:hover {
+  opacity: 0.9;
+}
+
+.manual-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.manual-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.manual-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.manual-modal h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.manual-status {
+  margin: 20px 0;
+}
+
+.manual-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.view-manual-btn,
+.download-manual-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.view-manual-btn {
+  background-color: #0ca589;
+  color: white;
+}
+
+.download-manual-btn {
+  background-color: #4a5568;
+  color: white;
+}
+
+.view-manual-btn:hover,
+.download-manual-btn:hover {
+  opacity: 0.9;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+/* Update the existing manual-button styles */
+.manual-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(12, 165, 137, 0.9);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.manual-button:hover {
+  background-color: rgba(12, 165, 137, 1);
+}
+
+
+.manual-button.disabled {
+  background-color: rgba(108, 117, 125, 0.9);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.manual-button.disabled:hover {
+  background-color: rgba(108, 117, 125, 0.9);
+}
+
+
+.manual-upload-handler {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.upload-label,
+.delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  white-space: nowrap;
+  min-width: fit-content;
+  gap: 8px;
+}
+
+.upload-label {
+  background-color: #0ca589;
+  color: white;
+}
+
+.upload-label:hover {
+  background-color: #0b967c;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  width: auto;
+  min-width: fit-content;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.delete-button:active {
+  transform: translateY(0);
+}
+
+.delete-button svg {
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.delete-button span {
+  display: inline-block;
+}
+
+.delete-button:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* Loading effect */
+.delete-button.loading,
+.upload-label.loading {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.copy-template-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #28a745;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.copy-template-button:hover {
+  background-color: #218838;
+}
+
+.copy-template-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.copy-template-button svg {
+  font-size: 16px;
+}
+
+.machine-header-icon2.icon-FaMagic.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #ccc;
+}
+
+.machine-header-icon2.icon-FaMagic.disabled:hover {
+  color: #ccc;
+  transform: none;
+}
+.machine-header-icon2 icon-bookmark.disabled,
+.machine-header-icon2 icon-lock.disabled {
+  color: transparent;
+}
+
+.template-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0ca589;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .upload-label,
+  .delete-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

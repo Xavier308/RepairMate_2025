@@ -1,0 +1,51 @@
+# .gitignore
+
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.env.local
+db.sqlite3
+
+# Ignorar configuraciones locales
+repairmate/settings/local.py
+
+# Ignorar archivos de configuración sensibles
+*.env
+*.env.local
+*.env.production
+
+# Ignorar archivos de medios y estáticos recopilados
+#media/
+staticfiles/
+
+media/
+
+reset_and_populate.sh
+
+file_manager/migrations
+
+# Por que existe esta carpeta - Investigar.
+api/migrations
+
+
+__pycache__/
+
+suggestedNextSteps.md
+
+
+etc/
+
+eb_logs
+
+NextSteps.md
+
+oldREADME.md
+
+repairmate/settings_prod.py
+
+servers_settings/

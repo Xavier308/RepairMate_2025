@@ -1,0 +1,464 @@
+/* IssuePage.css */
+.issue-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+}
+
+/* Solutions section styles */
+.solutions-section {
+  margin-top: 2rem;
+}
+
+.solutions-section h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Add solution form */
+.add-solution-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background-color: #f8fafc;
+  border-radius: 6px;
+}
+
+.add-solution-form textarea {
+  flex-grow: 1;
+  height: 38px; /* Same height as button */
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  resize: none;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+
+.add-solution-form textarea:focus {
+  height: 100px;
+}
+
+.add-solution-form button {
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  height: 38px;
+  background-color: #0ca589;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-solution-form button:hover {
+  background-color: #0b967c;
+}
+
+/* Solution management buttons */
+.guide-section button,
+.button-group button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.guide-section button,
+.button-group .btn-primary {
+  background-color: #0ca589;
+  color: white;
+}
+
+.guide-section button:hover,
+.button-group .btn-primary:hover {
+  background-color: #0b967c;
+}
+
+.button-group .btn-secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.button-group .btn-secondary:hover {
+  background-color: #cbd5e0;
+}
+
+/* Solution accordion styles */
+.solution-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.solution-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #f8fafc;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.solution-header:hover {
+  background-color: #f1f5f9;
+}
+
+.solution-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.solution-number {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.solution-description {
+  color: #4a5568;
+  flex-grow: 1;
+  margin: 0 1rem;
+}
+
+.guide-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #e6fffa;
+  color: #0ca589;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Content area */
+.solution-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #ffffff;
+}
+
+.solution-content.expanded {
+  max-height: 2000px;
+  padding: 1.5rem;
+}
+
+/* Edit form styles */
+.edit-solution-form {
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 6px;
+}
+
+.edit-solution-form textarea,
+.edit-solution-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.edit-step {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.edit-step h4 {
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+}
+
+/* Guide section styles */
+.guide-section {
+  margin-top: 1rem;
+}
+
+.guide-section h4 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.step-item {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.step-images img {
+  max-width: 200px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #0ca589;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0b967c;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e0;
+}
+
+/* Messages */
+.error-message {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  background-color: #dcfce7;
+  color: #166534;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* IssuePage.css updates */
+.issue-page h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.issue-page h1 strong {
+  font-weight: 600;
+}
+
+.issue-page h1 span {
+  font-weight: normal;
+}
+
+.issue-details h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: inline;
+}
+
+.issue-details p {
+  display: inline;
+  margin-left: 0.5rem;
+}
+
+.issue-details .description-block {
+  margin-bottom: 2rem;
+}
+
+.description-block h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: inline;
+}
+
+.description-block p {
+  display: inline;
+  margin-left: 0.5rem;
+}
+
+.edit-form {
+  margin: 1.5rem 0;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.edit-form textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+/* Common button styles */
+.action-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 1rem;
+  font-size: 1rem;
+  min-width: 140px; /* Increased from 120px */
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrapping */
+  line-height: 1.5;
+}
+
+/* Specific style for Save Solution and Back to Machine */
+.action-button.wide-button {
+  min-width: 160px; /* Even wider for longer text */
+}
+
+/* Back to Machine button specific style */
+.issue-page > .action-button:last-child {
+  margin-bottom: 0;
+  min-width: 160px; /* Match the wide button size */
+}
+
+.button-group .action-button,
+.guide-section .action-button {
+  min-width: 160px; /* Ensure consistent width for these buttons */
+}
+
+.primary-button {
+  background-color: #0ca589;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #0b967c;
+}
+
+.secondary-button {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.secondary-button:hover {
+  background-color: #cbd5e0;
+}
+
+
+/* Button specific margins */
+.edit-form button {
+  margin-bottom: 1rem;
+}
+
+.issue-details button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Back to Machine button specific style */
+.issue-page > button:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Solution actions styling */
+.solution-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.delete-solution-button {
+  background: none;
+  border: none;
+  color: #dc3545;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.delete-solution-button:hover {
+  background-color: rgba(220, 53, 69, 0.1);
+  transform: scale(1.1);
+}
+
+.delete-solution-button:active {
+  transform: scale(0.95);
+}
+
+/* Ensure solution header has proper spacing */
+.solution-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #f8fafc;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Add hover effect for the entire header */
+.solution-header:hover {
+  background-color: #f1f5f9;
+}
+
+/* Make sure solution title takes up appropriate space */
+.solution-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}

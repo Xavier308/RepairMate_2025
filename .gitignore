@@ -1,0 +1,18 @@
+repairmate_backend/venv/
+
+/repairmate_backend/.env
+#
+/__pycache__/
+#
+/venv
+
+# Enviroment
+.env
+.env.production
+#
+NextSteps.md
+
+SolutionEditor.js
+
+
+

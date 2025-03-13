@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RepairMate - Streamline Machine Troubleshooting and Training</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customBlack: '#1a1a1a',
+                        customGray: '#2a2a2a',
+                        highlight: '#d6ff2c',  /*! lime neon */
+                    },
+                    fontFamily: {
+                        'bricolage': ['Bricolage Grotesque', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-customBlack text-white">
+    <header class="bg-customBlack py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <img src="assets/repairmate_logo.png" alt="RepairMate Logo" class="h-12">
+            <nav>
+                <a href="#features" class="mx-3 hover:text-highlight">Features</a>
+                <a href="#pricing" class="mx-3 hover:text-highlight">Pricing</a>
+                <a href="#team" class="mx-3 hover:text-highlight">Team</a>
+                <a href="#contact" class="mx-3 hover:text-highlight">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-20 bg-customBlack">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h1 class="text-5xl font-bold mb-4 font-bricolage text-highlight">Streamline Machine Troubleshooting and Training</h1>
+                        <p class="mb-6">RepairMate: Your all-in-one solution for efficient machine management and employee upskilling</p>
+                        <a href="#" class="bg-highlight text-customBlack py-2 px-6 rounded-full text-lg font-semibold hover:bg-opacity-80 transition duration-300">Get Started</a>
+                    </div>
+                    <div>
+                        <img src="assets/repairmate_mockup.png" alt="RepairMate Mockup" class="w-full h-auto rounded-lg shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-20 bg-customGray">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8 font-bricolage text-highlight">Key Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-customBlack p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 font-bricolage">Quick Troubleshooting</h3>
+                        <p>Identify and resolve machine issues rapidly with our intuitive interface and comprehensive knowledge base.</p>
+                    </div>
+                    <div class="bg-customBlack p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 font-bricolage">Interactive Training</h3>
+                        <p>Empower your employees with interactive, machine-specific training modules to enhance their skills and productivity.</p>
+                    </div>
+                    <div class="bg-customBlack p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 font-bricolage">Real-time Collaboration</h3>
+                        <p>Enable seamless communication between team members for faster problem-solving and knowledge sharing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="py-20 bg-customBlack">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8 font-bricolage text-highlight">Pricing Plans</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-customGray p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 font-bricolage">Basic</h3>
+                        <p class="text-2xl font-bold mb-4">$29<span class="text-sm">/month</span></p>
+                        <ul class="mb-6">
+                            <li>Up to 5 users</li>
+                            <li>Basic troubleshooting</li>
+                            <li>Limited training modules</li>
+                        </ul>
+                        <a href="#" class="block text-center bg-highlight text-customBlack py-2 rounded-full font-semibold hover:bg-opacity-80 transition duration-300">Choose Plan</a>
+                    </div>
+                    <div class="bg-customGray p-6 rounded-lg shadow-md border-2 border-highlight">
+                        <h3 class="text-xl font-semibold mb-4 font-bricolage">Pro</h3>
+                        <p class="text-2xl font-bold mb-4">$79<span class="text-sm">/month</span></p>
+                        <ul class="mb-6">
+                            <li>Up to 20 users</li>
+                            <li>Advanced troubleshooting</li>
+                            <li>Full access to training modules</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <a href="#" class="block text-center bg-highlight text-customBlack py-2 rounded-full font-semibold hover:bg-opacity-80 transition duration-300">Choose Plan</a>
+                    </div>
+                    <div class="bg-customGray p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4 font-bricolage">Enterprise</h3>
+                        <p class="text-2xl font-bold mb-4">Custom</p>
+                        <ul class="mb-6">
+                            <li>Unlimited users</li>
+                            <li>Custom solutions</li>
+                            <li>Dedicated account manager</li>
+                            <li>24/7 premium support</li>
+                        </ul>
+                        <a href="#" class="block text-center bg-highlight text-customBlack py-2 rounded-full font-semibold hover:bg-opacity-80 transition duration-300">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="py-20 bg-customGray">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-8 font-bricolage text-highlight">Our Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-customBlack p-6 rounded-lg shadow-md text-center">
+                        <img src="assets/abimael1.png" alt="Abimael Perez" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold mb-2 font-bricolage">Abimael Perez</h3>
+                        <p>Front-end Developer</p>
+                    </div>
+                    <div class="bg-customBlack p-6 rounded-lg shadow-md text-center">
+                        <img src="assets/xavier2.png" alt="Xavier Cruz" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold mb-2 font-bricolage">Xavier Cruz</h3>
+                        <p>Fullstack & Team Leader</p>
+                    </div>
+                    <div class="bg-customBlack p-6 rounded-lg shadow-md text-center">
+                        <img src="assets/john3.png" alt="John López" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold mb-2 font-bricolage">John López</h3>
+                        <p>Back-end Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-customGray text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4 font-bricolage">Ready to Optimize Your Machine Operations?</h2>
+                <p class="mb-6">Join thousands of businesses already benefiting from RepairMate</p>
+                <a href="#" class="bg-highlight text-customBlack py-2 px-6 rounded-full text-lg font-semibold hover:bg-opacity-80 transition duration-300">Start Your Free Trial</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-customBlack py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <img src="assets/repairmate_logo.png" alt="RepairMate Logo" class="h-12 mb-2">
+                    <p>Empowering machine management and training</p>
+                </div>
+                <nav>
+                    <a href="#" class="mx-3 hover:text-highlight">Contact Us</a>
+                    <a href="#" class="mx-3 hover:text-highlight">Privacy Policy</a>
+                    <a href="#" class="mx-3 hover:text-highlight">Terms of Service</a>
+                </nav>
+            </div>
+            <div class="mt-8 text-center">
+                <p>© 2024 RepairMate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,337 @@
+.troubleshoot-detail-container {
+  min-height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+
+
+.troubleshoot-detail-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+
+.troubleshoot-input-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-right: 20px;
+}
+
+.troubleshoot-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #212121;
+  margin-top: 80px;
+  padding-left: 0px;
+}
+
+.troubleshoot-input-container {
+  position: relative;
+  background-color: #e0dcdc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.troubleshoot-input {
+  width: 100%;
+  min-height: 60px;
+  padding: 15px 60px 15px 15px;
+  border: none;
+  font-size: 16px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+  background-color: #e0dcdc;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 4px 8px;
+  background-color: #0ca589;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 20px;
+  color: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
+}
+
+.matching-issues, .common-issues-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.matching-issues h3, .common-issues-header h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.common-issues-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.all-issues-btn {
+  background-color: #0ca589;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.all-issues-btn:hover {
+  background-color: #0b967c;
+}
+
+.common-issues-list, .issue-item {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.common-issues-list li, .issue-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.common-issues-list li:last-child, .issue-item:last-child {
+  border-bottom: none;
+}
+
+.common-issues-list li:hover, .issue-item:hover {
+  background-color: #f9f9f9;
+}
+
+.issue-item h4 {
+  margin: 0 0 5px 0;
+  color: #0ca589;
+}
+
+.issue-item p {
+  margin: 0;
+  color: #666;
+}
+
+.machine-info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 140px;
+  min-width: 300px;
+  max-width: 400px;
+  padding-right: 40px;
+}
+
+.machine-info-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.machine-header {
+  background: linear-gradient(to right, #061025, #2a354a);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.machine-header h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 18px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.machine-header-icon {
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.machine-header-icon:hover {
+  transform: scale(1.2);
+}
+
+.icon-FaMagic {
+  color: #ffe868;
+}
+
+.icon-FaMagic:hover {
+  color: #FFD700;
+}
+
+.icon-bookmark, .icon-lock {
+  color: #cccccc;
+}
+
+.troubleshoot-machine-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.troubleshoot-machine-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.machine-info-content {
+  padding: 15px;
+}
+
+.machine-info-content p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffcdd2;
+  border: 1px solid #ef9a9a;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Machine Modal */
+.machine-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.machine-modal-content {
+  background-color: #fefefe;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.machine-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.machine-modal-content img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}
+
+.edit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #0ca589;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0b967c;
+}
+
+.guide-item {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/*  media query for smaller screens */
+@media (max-width: 768px) {
+  .troubleshoot-detail-content {
+    flex-direction: column;
+  }
+
+  .troubleshoot-input-section {
+    padding-right: 0;
+  }
+
+  .machine-info-section {
+    max-width: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+}

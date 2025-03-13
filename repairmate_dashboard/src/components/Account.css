@@ -1,0 +1,282 @@
+.account {
+  min-height: calc(100vh - 80px);
+  overflow-y: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.account h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+/* Tabs styling */
+.account-tabs1 {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+}
+
+.tab-button1 {
+  width: 120px !important;
+  padding: 15px 25px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.tab-button1:hover {
+  color: #0ca589;
+}
+
+.tab-button1.active {
+  color: #0ca589;
+  border-bottom: 2px solid #0ca589;
+  background-color: #ffffff;
+}
+
+.tab-content-container {
+  padding: 20px;
+}
+
+/* Account info and forms */
+.account-info, .edit-form {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.account-info {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.account-info p {
+  margin: 0;
+  padding: 12px 0;  /* Increased padding between lines */
+  font-size: 16px;
+  color: #495057;
+}
+
+.account-info p strong {
+  display: inline-block;
+  width: 100px;  /* Fixed width for labels */
+  color: #333;
+}
+
+.account-info button {
+  margin-top: 20px;  /* Space above the Edit Profile button */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #0ca589;
+  outline: none;
+}
+
+/* Subscription styling */
+.subscription-info h3 {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.current-plan {
+  display: inline-block;
+  color: #0ca589;
+  font-weight: 600;
+  padding: 6px 12px;
+  background-color: #e6fff9;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+.plan-details {
+  margin-top: 20px;
+}
+
+.plan-details p {
+  margin: 12px 0;
+  font-size: 16px;
+  color: #495057;
+}
+
+.features-list {
+  margin-top: 20px;
+}
+
+.features-list h4 {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.features-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  color: #495057;
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.features-list li::before {
+  content: "✓";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #0ca589;
+  color: white;
+  border-radius: 50%;
+  margin-right: 12px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.info-message {
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* Team management styling */
+.teams-management {
+  padding: 20px;
+}
+
+.team-members {
+  margin: 20px 0;
+}
+
+.info-message {
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #0ca589;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0b967c;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Messages */
+.error-message,
+.success-message {
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.success-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+@media (max-width: 768px) {
+  .account-info p strong {
+    width: 80px;  /* Slightly smaller width on mobile */
+  }
+  
+  .account-info p {
+    padding: 10px 0;  /* Slightly less padding on mobile */
+  }
+
+  .subscription-info h3 {
+    font-size: 20px;
+  }
+  
+  .current-plan {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+  }
+  
+  .features-list li {
+    padding: 10px 0;
+  }
+}

@@ -1,0 +1,54 @@
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: #061025;    
+    box-shadow: 0 2px 4px rgb(88, 95, 95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1001;
+  }
+  
+  .header-logo {
+    height: 45px; /* logo size*/
+  }
+  
+  .header-logo-image {
+    height: 100%;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-account,
+  .header-logout {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ece9e9;
+    font-size: 18px;
+  }
+
+  .header-logout {
+    margin-right: 35px;
+  }
+  
+  .header-account svg,
+  .header-logout svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+  }
+  
+  .header-logout {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }

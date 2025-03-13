@@ -1,0 +1,803 @@
+/* Global Styles */
+:root {
+    --color-black: #09090b;
+    --color-gray: #17181f; /* #1a1a1a,  #17181f */
+    --color-deepBlue: #061025;
+    --color-yellow: #FFD700;
+    --color-white: #ffffff;
+    --color-highlight: #45f8bf;  /*#45f8bf;  #0EB89C;*/
+    --color-h1: linear-gradient(
+        45deg,
+        #808080,
+        #C0C0C0 25%,
+        #D8D8D8 50%,
+        #C0C0C0 75%,
+        #808080
+    );   
+    /* --color-h1: linear-gradient(to right, #C0C0C0, #E8E8E8, #C0C0C0);*/
+    --color-ultra: linear-gradient(135deg, #45f8bf, #647eff);/*#0eb89c, #647eff, #ea52f8*/
+    --font-main: 'Arial', sans-serif;
+    --font-heading: 'Bricolage', sans-serif;
+}
+
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: var(--color-black);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 { /* ver .hero h1 */
+    font-family: var(--font-heading);
+    font-weight: 900;
+    background: var(--color-h1);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-top: 120px;
+}
+
+.highlight_h1 {
+    background: var(--color-ultra);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;    
+}
+
+h2 {
+    font-size: 34px;
+}
+
+h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-highlight);
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Lo añadí para manipular el boton del header*/ 
+.btn_header {
+    display: inline-block;
+    background-color: var(--color-highlight);
+    color: var(--color-black);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 160px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+.btn_header:hover {
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-highlight);
+    color: var(--color-black);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Header Styles */
+.header {
+    position: relative;
+    background-color: var(--color-black);
+    padding: 20px 0;
+    overflow: hidden;
+}
+ /* New */
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.perceptpixel.com/bibawdef/repairmate_landingpage/header_light.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1; /* Adjust this value to make the SVG more or less visible */
+    z-index: 1;
+}
+
+
+
+.header .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    height: 55px;
+}
+
+.header nav a {
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 20px;
+    padding-left: 30px;
+}
+
+.header nav a:hover {
+    color: var(--color-highlight);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--color-black);
+    padding: 50px 0 40px 0;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    /*align-items: center;*/ /* causa que el H1 no se vea bien posicionado arriba con imagen*/
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 27px;
+    color:#ffffff;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+/* Features Section */
+.features {
+    position: relative;
+    background-color: var(--color-black);
+    padding: 80px 0;
+    overflow: visible;
+}
+
+.features .container {
+    position: relative;
+    z-index: 2;
+}
+
+.features h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.features .keyfeatures-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.perceptpixel.com/bibawdef/repairmate_landingpage/decor2.svg');
+    background-size: 50% auto; /* This will make the SVG 50% of the width of its container */
+    background-position: center center;
+    opacity: 0.5; /* Adjust this value to make the SVG more or less visible */
+    z-index: 1;
+}
+.feature-grid {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background-color: var(--color-gray);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.feature-icon {
+    width: 64px; /* or your preferred size */
+    height: 64px;
+    margin-bottom: 20px; /* Space between icon and text */
+}
+
+.feature-card h3 {
+    margin-top: 0; /* Remove top margin as we have the icon above */
+}
+
+/* Pricing Section */
+.pricing {
+    background-color: var(--color-black);
+    padding: 80px 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background-color: var(--color-gray);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--color-highlight);
+}
+
+.price {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 16px;
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* Team Section */
+.team {
+    background-color: var(--color-black);
+    padding: 80px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.team-card {
+    background-color: var(--color-gray);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.team-card img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* CTA Section */
+.cta {
+    background-color: var(--color-black);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta .btn {
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    background-color: var(--color-black);
+    padding: 40px 0;
+}
+.footer .footer-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.perceptpixel.com/bibawdef/repairmate_landingpage/decor3.svg');
+    background-size: 50% auto; /* This will make the SVG 50% of the width of its container */
+    background-position: center center;
+    opacity: 0.3; /* Adjust this value to make the SVG more or less visible */
+    z-index: 1;
+}
+.footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+.footer h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.footer-logo img {
+    height: 48px;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.footer-nav a {
+    margin-left: 20px;
+}
+
+.copyright {
+    text-align: left;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-white);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Login Button Style */
+.login-btn {
+    color: var(--color-white);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+
+.login-btn:hover {
+    opacity: 0.8;
+}
+
+/* About Section Styles */
+.about {
+    background-color: var(--color-black);
+    padding: 80px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.about-story, .about-github {
+    background-color: var(--color-gray);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-story h3, .about-github h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.about-story a {
+    color: var(--color-highlight);
+    text-decoration: underline;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--color-highlight);
+    color: var(--color-black);
+    border-radius: 20px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.github-link:hover {
+    opacity: 0.8;
+}
+
+/* Team Social Links */
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-black);
+    transition: all 0.3s ease;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-highlight);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--color-highlight);
+}
+
+.social-icon:hover svg {
+    color: var(--color-black);
+}
+
+/* Estilos base del nav */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-highlight);
+}
+
+/* Estilos del botón hamburguesa */
+.hamburger {
+    display: none; /* Oculto por defecto en desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-white);
+    margin: 6px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/*  New section   for images and benefits   */
+.showcase {
+    padding: 80px 0;
+    background-color: var(--color-black);
+}
+
+.showcase-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+.showcase-item.reverse {
+    direction: rtl;
+}
+
+.showcase-item.reverse .showcase-content {
+    direction: ltr;
+}
+
+.showcase-content {
+    padding: 20px;
+}
+
+.showcase-content h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.showcase-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.showcase-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.benefits {
+    padding: 80px 0;
+    background-color: var(--color-black);
+}
+
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.benefit-card {
+    background-color: var(--color-black);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.benefit-icon {
+    margin-bottom: 20px;
+    color: var(--color-highlight);
+}
+
+.benefit-card h3 {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .showcase-item {
+        grid-template-columns: 1fr;
+        margin-bottom: 60px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .showcase-item.reverse {
+        direction: ltr;
+    }
+}
+
+/* ends */
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 15px; /* Reduce el espacio entre elementos */
+    }
+    
+    .nav-menu a {
+        font-size: 16px; /* Reduce el tamaño de fuente */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Muestra el botón hamburguesa */
+        position: relative;
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--color-gray);
+        padding: 80px 20px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+
+    /* Animación del botón hamburguesa cuando está activo */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+        margin: 10px 0;
+        width: 100%;
+    }    
+
+    /* Ajuste especial para el botón de login en móvil */
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero .container,
+    .feature-grid,
+    .pricing-grid,
+    .team-grid,
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav {
+        margin-top: 20px;
+    }
+
+    .footer-nav a {
+        margin: 0 10px;
+    }
+}
+
+/* Overlay para el fondo cuando el menú está abierto */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.overlay.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    /*.nav-menu .login-btn {
+        display: none;
+    }*/
+}
+
+/* 2. Reordenar hero section en móvil */
+@media (max-width: 768px) {
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        order: 1;
+    }
+    
+    .hero-image {
+        order: 2;
+        margin-top: 0px;
+    }
+}
+
+/* 3. Centralizar h2 en móvil */
+@media (max-width: 768px) {
+    .section h2 {
+        text-align: center;
+    }
+}
+
+/* 4. Ajustar imágenes del showcase */
+.showcase-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .showcase-image img {
+        width: 100%;
+        max-width: 500px; /* o el tamaño que prefieras */
+        margin: 0 auto;
+    }
+}
+
+/* New */
+
+/* 5. Ajustar copyright a la izquierda en PC */
+.container > :last-child {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .container > :last-child {
+        text-align: center;
+    }
+}
+
+/* Asegurar que el contenido del showcase se alinee correctamente */
+.showcase-item.reverse {
+    direction: rtl;
+}
+
+.showcase-item.reverse .showcase-content,
+.showcase-item.reverse .showcase-image {
+    direction: ltr;
+}
+
+@media (max-width: 768px) {
+    .showcase-item,
+    .showcase-item.reverse {
+        direction: ltr;
+        text-align: center;
+    }
+}

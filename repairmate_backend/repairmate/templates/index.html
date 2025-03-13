@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="{% static 'react/build/favicon.ico' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Smart Solution to Troubleshoot Machine Issues Fast"
+    />
+    <link rel="manifest" href="{% static 'react/build/manifest.json' %}" />
+    <title>RepairMate</title>
+  </head>
+  <body>
+    <noscript>Troubleshoot machine issues fast</noscript>
+    <div id="root"></div>
+    
+    <!-- Scripts y CSS se cargarán dinámicamente -->
+    {% load react_tags %}
+    <!-- JS principal -->
+    <script type="module" src="{% react_asset 'index.html' %}"></script>
+    <link rel="stylesheet" href="{% static 'react/build/assets/index.C-8k3u_U.css' %}" />
+  </body>
+</html>

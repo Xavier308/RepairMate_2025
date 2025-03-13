@@ -1,0 +1,89 @@
+/* ImageUploader styles */
+.image-uploader {
+    margin: 10px 0;
+  }
+  
+  .upload-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #0ca589;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #0b967c;
+  }
+  
+  .upload-button.uploading {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .upload-error {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Spinner animation */
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Image containers */
+  .step-images,
+  .issue-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .step-image-container,
+  .issue-image-container {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .step-image-container img,
+  .issue-image-container img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .image-remove-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(220, 53, 69, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .image-remove-button:hover {
+    background-color: #dc3545;
+    transform: scale(1.1);
+  }

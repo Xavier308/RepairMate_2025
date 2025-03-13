@@ -1,0 +1,55 @@
+.step-guide {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .step-guide h1 {
+    margin-bottom: 20px;
+  }
+  
+  .step-guide input[name="title"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .step-guide .step {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .step-guide .step input,
+  .step-guide .step textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .step-guide .step textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .step-guide button {
+    background-color: #0ca589;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .step-guide button:hover {
+    background-color: #0b967c;
+  }
+  
+  .step-guide .error-message {
+    color: #dc3545;
+    margin-bottom: 15px;
+  }

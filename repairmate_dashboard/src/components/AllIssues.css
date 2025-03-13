@@ -1,0 +1,94 @@
+/* AllIssues.css */
+.all-issues {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 80px;
+  }
+  
+  .all-issues h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .filters {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filters select {
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  .issues-list {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .issue-item {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .issue-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .issue-item h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .issue-item p {
+    margin: 0 0 10px 0;
+    color: #666;
+  }
+  
+  .category-tag {
+    display: inline-block;
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #495057;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    display: block;
+    padding: 5px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #495057;
+  }
+  
+  .page-item.active .page-link {
+    background-color: #0ca589;
+    color: white;
+    border-color: #0ca589;
+  }

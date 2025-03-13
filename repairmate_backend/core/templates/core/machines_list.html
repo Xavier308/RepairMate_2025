@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Machines - RepairMate{% endblock %}
+{% block content %}
+<h1>Machines</h1>
+<div class="machine-grid">
+    {% for machine in machines %}
+    <div class="machine-card">
+        <a href="{% url 'machine_detail' machine.id %}">
+            <img src="{{ machine.get_image_url }}" alt="{{ machine.name }}" class="machine-image">
+        </a>
+        <h3>{{ machine.name }}</h3>
+        <p>Model: {{ machine.model }}</p>
+        <p>{{ machine.category.category_name }} by {{ machine.manufacturer.name }}</p>
+    </div>
+    {% empty %}
+    <p>No machines available.</p>
+    {% endfor %}
+</div>
+{% endblock %}
