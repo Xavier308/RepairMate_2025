@@ -20,17 +20,17 @@ repairmate/settings/local.py
 *.env.production
 
 # Ignorar archivos de medios y estáticos recopilados
-#media/
+
 staticfiles/
 
 media/
 
 reset_and_populate.sh
 
-file_manager/migrations
+#file_manager/migrations
 
-# Por que existe esta carpeta - Investigar.
-api/migrations
+#  Investigar esta carpeta.
+#api/migrations
 
 
 __pycache__/
