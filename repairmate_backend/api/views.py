@@ -41,7 +41,8 @@ from .serializers import (
 
 
 # Function to serve images directly from the file system
-# It was change to detect automatically the type of image
+# It was changed to detect automatically the type of image.
+# Note: Verify this function because - It needs to verify ext. & magic numbers (3/14/25)
 def serve_image(request, image_name):
     image_path = os.path.join(settings.MEDIA_ROOT, 'managed_files', image_name)
     # Detectar el tipo de contenido basado en la extensión del archivo
@@ -349,6 +350,21 @@ class MachineViewSet(viewsets.ModelViewSet):
     serializer_class = MachineSerializer
     permission_classes = [permissions.IsAuthenticated, IsMachineOwnerOrTemplate]
 
+    # New for performance (3/14/2025)
+    def retrieve(self, request, *args, **kwargs):
+        queryset = Machine.objects.select_related(
+            'category', 'manufacturer', 'department', 'machine_type'
+        ).prefetch_related(
+            'issues', 
+            'issues__solutions',
+            'issues__solutions__guide',
+            'issues__solutions__guide__steps'
+        )
+        instance = self.get_object(queryset=queryset)
+        serializer = self.get_serializer(instance)
+        return Response(serializer.data)
+    # <-----------
+
     def get_queryset(self):
         """
         Filter machines to show:
@@ -411,8 +427,18 @@ class MachineViewSet(viewsets.ModelViewSet):
         context.update({"request": self.request})
         return context
 
+    ''' Changed to test performance (3/14/25)
     def list(self, request):
         queryset = self.get_queryset()
+        serializer = self.get_serializer(queryset, many=True)
+        return Response(serializer.data)
+    '''
+    # New (3/14/25)
+    def list(self, request):
+        queryset = self.get_queryset().select_related(
+            'category', 'manufacturer', 'department', 'machine_type'
+        )
+        # Aplicar filtros si existen en el request
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
     
@@ -750,6 +776,47 @@ class StepViewSet(viewsets.ModelViewSet):
             return Response({'message': 'Image deleted successfully'}, status=status.HTTP_200_OK)
         except ManagedFile.DoesNotExist:
             return Response({'error': 'Image not found'}, status=status.HTTP_404_NOT_FOUND)
+
+# New snippet to improve performance (3/14/25)
+@api_view(['GET'])
+@permission_classes([permissions.IsAuthenticated, IsMachineOwnerOrTemplate])
+def optimized_machine_detail(request, machine_id):
+    """
+    Optimized endpoint to retrieve machine details with related data preloaded.
+    Uses select_related and prefetch_related to reduce database queries.
+    """
+    try:
+        # Use select_related for ForeignKey relationships
+        # and prefetch_related for reverse relationships
+        machine = Machine.objects.select_related(
+            'category', 'manufacturer', 'department', 'machine_type'
+        ).prefetch_related(
+            'issues',
+            'issues__solutions',
+            'issues__solutions__guide',
+            'issues__solutions__guide__steps'
+        ).get(id=machine_id)
+        
+        # Check permissions
+        permission_check = IsMachineOwnerOrTemplate()
+        if not permission_check.has_object_permission(request, None, machine):
+            return Response({"error": "Permission denied"}, status=status.HTTP_403_FORBIDDEN)
+        
+        # Log the activity
+        request.user.log_activity(
+            'MACHINE_VIEW',
+            f"Viewed machine: {machine.name}",
+            machine=machine
+        )
+        
+        # Serialize and return the machine data
+        serializer = MachineSerializer(machine, context={'request': request})
+        return Response(serializer.data)
+    except Machine.DoesNotExist:
+        return Response({"error": "Machine not found"}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    # <--------------------
 
 
 # Important - Match_issues function -TroubleshootDetail.js

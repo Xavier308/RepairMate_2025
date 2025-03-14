@@ -68,11 +68,13 @@ INSTALLED_APPS = [
     'corsheaders',
     'api',
     'core',
-    'file_manager', # New app
+    'file_manager',
+    'debug_toolbar', # New
 ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware', # New
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -81,6 +83,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+# Debug Toolbar settings
+INTERNAL_IPS = [
+    '127.0.0.1',
+    'localhost',
 ]
 
 # Media settings for handling file uploads
@@ -104,10 +112,9 @@ STATICFILES_DIRS = [
 #if os.path.exists(REACT_APP_DIR):
 #    STATICFILES_DIRS.append(REACT_APP_DIR)
 
-# Configuración para la app Vite
+# Vite Configuration
 VITE_APP_BUILD_DIR = os.path.join(BASE_DIR, 'repairmate', 'static', 'react', 'build')
-# New Path for Vite Build
-#VITE_APP_BUILD_DIR = os.path.join(BASE_DIR, 'repairmate_dashboard', 'build')
+
 if os.path.exists(VITE_APP_BUILD_DIR):
     STATICFILES_DIRS.append(VITE_APP_BUILD_DIR)
 

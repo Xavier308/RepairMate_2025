@@ -1,5 +1,4 @@
 #  repairmate_backend/api/urls.py
-
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
@@ -9,7 +8,8 @@ from .views import (
     EquipmentCategoryViewSet, DepartmentViewSet, MachineTypeViewSet, machine_issues, #create_solution
     match_issues, AllIssuesView, issue_detail, create_issue, solution_operations, 
     IssueViewSet, StepViewSet, SubscriptionPlanViewSet, OrganizationViewSet,
-    UserPreferencesViewSet, UserActivityLogViewSet, UserNoteViewSet, TrainingWorkspaceViewSet
+    UserPreferencesViewSet, UserActivityLogViewSet, UserNoteViewSet, TrainingWorkspaceViewSet,
+    optimized_machine_detail # New
 )
 
 from django.urls import path
@@ -26,12 +26,12 @@ router.register(r'issues', IssueViewSet)
 router.register(r'steps', StepViewSet)
 
 # Routes for managing subscription plans and organizations
-router.register(r'subscription-plans', SubscriptionPlanViewSet) # New
-router.register(r'organizations', OrganizationViewSet) # New
+router.register(r'subscription-plans', SubscriptionPlanViewSet)
+router.register(r'organizations', OrganizationViewSet)
 
 # Routes for user-related settings and activity tracking
-router.register(r'preferences', UserPreferencesViewSet, basename='preferences') # New
-router.register(r'activity-logs', UserActivityLogViewSet, basename='activity-logs') # New
+router.register(r'preferences', UserPreferencesViewSet, basename='preferences')
+router.register(r'activity-logs', UserActivityLogViewSet, basename='activity-logs')
 router.register(r'notes', UserNoteViewSet, basename='notes')
 
 # Routes for training-related features
@@ -43,12 +43,16 @@ urlpatterns = [
     path('api-token-auth/', CustomAuthToken.as_view(), name='api_token_auth'), # Token authentication
     path('register/', register_user, name='register'),
     path('user/profile/', user_profile, name='user_profile'),
+
     # Routes for issue matching and troubleshooting
     path('match-issues/', match_issues, name='match_issues'),
     path('machines/<int:machine_id>/issues/', machine_issues, name='machine_issues'), # for TroubleshootDetails.js
     path('machines/<int:machine_id>/issues/', create_issue, name='create_issue'), # Do not change this (important to edit and save)
     path('issues/<int:issue_id>/', issue_detail, name='issue_detail'), # Important to retrieve the detail issue (PageIssue.js)
-    
+
+    # New (3/14/25): 
+    path('machines/<int:machine_id>/detail/', optimized_machine_detail, name='optimized_machine_detail'),
+
     # Route for viewing all issues
     path('issues/', AllIssuesView.as_view(), name='all_issues'),
     
