@@ -30,7 +30,7 @@ class MachineViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated, IsMachineOwnerOrTemplate]
 
     def retrieve(self, request, *args, **kwargs):
-        queryset = Machine.objects.select_related(
+        self.queryset = Machine.objects.select_related(
             'category', 'manufacturer', 'department', 'machine_type'
         ).prefetch_related(
             'issues', 
@@ -38,8 +38,11 @@ class MachineViewSet(viewsets.ModelViewSet):
             'issues__solutions__guide',
             'issues__solutions__guide__steps'
         )
-        instance = self.get_object(queryset=queryset)
+        # Call the standard retrieve method
+        instance = self.get_object()
         serializer = self.get_serializer(instance)
+
+        # Log the activity
         request.user.log_activity(
             'MACHINE_VIEW',
             f"Viewed machine: {instance.name}",
