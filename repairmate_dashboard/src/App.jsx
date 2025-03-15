@@ -1,35 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { LanguageProvider } from './context/LanguageContext.jsx'; //New
+import { LanguageProvider } from '@/context/LanguageContext.jsx'; //New
 import MainLayout from './layouts/MainLayout.jsx';
-import Header from './components/Header.jsx';
-import Sidebar from './components/Sidebar.jsx';
-import Register from './components/Register.jsx';
-import { setAuthToken } from './services/api';
-import Login from './components/Login.jsx';
+import Header from '@/components/common/Header.jsx';
+import Sidebar from '@/components/common/Sidebar.jsx';
+import Register from '@/components/auth/Register.jsx';
+import { setAuthToken } from '@/services/api';
+import Login from '@/components/auth/Login.jsx';
 // Main Pages
-import Home from './components/Home.jsx';
-import MyMachines from './components/MyMachines.jsx'
-import EnhancedTroubleshoot from './components/EnhancedTroubleshoot.jsx';
-import EnhancedTraining from './components/EnhancedTraining.jsx';
-import Settings from './components/Settings.jsx';
-import Account from './components/Account.jsx';
+import Home from '@/components/dashboard/Home.jsx';
+import MyMachines from '@/components/machines/MyMachines.jsx'
+import EnhancedTroubleshoot from '@/components/troubleshoooting/EnhancedTroubleshoot.jsx';
+import EnhancedTraining from '@/components/training/EnhancedTraining.jsx';
+import Settings from '@/components/settings/Settings.jsx';
+import Account from '@/components/account/Account.jsx';
 // Adjacent pages
-import MachineDetails from './components/MachineDetails.jsx';
-import TroubleshootDetail from './components/TroubleshootDetail.jsx';
-import IssuePage from './components/IssuePage.jsx';
+import MachineDetails from '@/components/machines/MachineDetails.jsx';
+import TroubleshootDetail from '@/components/troubleshoooting/TroubleshootDetail.jsx';
+import IssuePage from '@/components/issues/IssuePage.jsx';
 
-import TroubleshootGuide from './components/TroubleshootGuide.jsx';
-import PossibleIssues from './components/PossibleIssues.jsx';
-import AllIssues from './components/AllIssues.jsx';
-import AddMachine from './components/AddMachine.jsx';
-import EditMachine from './components/EditMachine.jsx';
-import ManageIssues from './components/ManageIssues.jsx';
-import StepGuide from './components/StepGuide.jsx';
+import TroubleshootGuide from '@/components/troubleshoooting/TroubleshootGuide.jsx';
+import PossibleIssues from '@/components/issues/PossibleIssues.jsx';
+import AllIssues from '@/components/issues/AllIssues.jsx';
+import AddMachine from '@/components/machines/AddMachine.jsx';
+import EditMachine from '@/components/machines/EditMachine.jsx';
+import ManageIssues from '@/components/issues/ManageIssues.jsx';
+import StepGuide from '@/components/issues/StepGuide.jsx';
 // Workspace
-import WorkspaceDetail from './components/WorkspaceDetail.jsx';
+import WorkspaceDetail from '@/components/workspace/WorkspaceDetail.jsx';
 // wizard
-import CustomizationWizard from './components/CustomizationWizard.jsx';
+import CustomizationWizard from '@/components/CustomizationWizard/CustomizationWizard.jsx';
 
 
 // CSS Style

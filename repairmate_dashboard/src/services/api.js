@@ -2,6 +2,7 @@ import axios from 'axios';
 import { formatISO } from 'date-fns';
 import { toDate, formatInTimeZone } from 'date-fns-tz';
 
+
 const API_URL = '/';  // nos permite
 //const API_URL = 'http://127.0.0.1:8000/'; Sí permite entrar con solo Django
 //const API_URL = 'http://localhost:8000/';
@@ -13,7 +14,6 @@ const api = axios.create({
     'Content-Type': 'application/json',
   },
 });
-
 
 // Configuración global para incluir el token en todas las solicitudes
 api.interceptors.request.use(function (config) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../components/Sidebar.jsx';
+import Sidebar from '@/components/common/Sidebar.jsx';
 
 function MainLayout({ children }) {
   return (

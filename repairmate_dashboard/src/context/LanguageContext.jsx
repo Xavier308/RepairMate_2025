@@ -14,7 +14,7 @@
  */
 
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { fetchUserPreferences } from '../services/api';
+import { fetchUserPreferences } from '@/services/api';
 
 const LanguageContext = createContext();
 
