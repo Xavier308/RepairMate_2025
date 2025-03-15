@@ -5,11 +5,12 @@ from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
 from .views import (
     register_user, user_profile, CustomAuthToken, MachineViewSet, ManufacturerViewSet,
-    EquipmentCategoryViewSet, DepartmentViewSet, MachineTypeViewSet, machine_issues, #create_solution
+    EquipmentCategoryViewSet, DepartmentViewSet, MachineTypeViewSet, machine_issues,
     match_issues, AllIssuesView, issue_detail, create_issue, solution_operations, 
     IssueViewSet, StepViewSet, SubscriptionPlanViewSet, OrganizationViewSet,
     UserPreferencesViewSet, UserActivityLogViewSet, UserNoteViewSet, TrainingWorkspaceViewSet,
-    optimized_machine_detail # New
+    serve_image, upload_step_image, upload_machine_manual, get_machine_manual, delete_machine_manual,
+    optimized_machine_detail, get_step_images, create_guide
 )
 
 from django.urls import path
