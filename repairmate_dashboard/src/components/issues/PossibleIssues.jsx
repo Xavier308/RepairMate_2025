@@ -4,6 +4,7 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { matchIssues } from '@/services/api';
 import './PossibleIssues.css';
 
+
 function PossibleIssues() {
   const [issues, setIssues] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -18,6 +18,7 @@ from ..serializers import (
 )
 from ..permissions import CanUpdateUserProfile
 
+
 logger = logging.getLogger(__name__)
 
 @api_view(['GET', 'PUT'])

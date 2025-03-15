@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchUserProfile, updateUserProfile } from '@/services/api'
 import './Account.css';
-//import api from '@/services/api';
+
 
 const roleOptions = [
   'TECHNICIAN',
@@ -12,7 +12,7 @@ const roleOptions = [
   'REGULAR'
 ];
 
-// Componente para el Profile Tab
+// Component for Profile Tab
 const ProfileTab = ({ user, isEditing, editedUser, handleInputChange, handleSubmit, setIsEditing }) => (
   <div className="tab-content">
     {isEditing ? (

@@ -9,6 +9,7 @@ import {
 import CustomizationWizard from '@/components/CustomizationWizard/CustomizationWizard.jsx';
 import './AddMachine.css';
 
+
 // Component for adding a new machine
 function AddMachine() {
   // State variables for input fields and form management

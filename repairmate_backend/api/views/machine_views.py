@@ -289,6 +289,7 @@ class MachineViewSet(viewsets.ModelViewSet):
         else:
             return Response({'error': 'File not found'}, status=404)
 
+# Departments
 class ManufacturerViewSet(viewsets.ModelViewSet):
     queryset = Manufacturer.objects.all()
     serializer_class = ManufacturerSerializer
@@ -309,6 +310,7 @@ class MachineTypeViewSet(viewsets.ModelViewSet):
     serializer_class = MachineTypeSerializer
     permission_classes = [permissions.IsAuthenticated]
 
+# Newest snippet to try to improve performance
 @api_view(['GET'])
 @permission_classes([permissions.IsAuthenticated, IsMachineOwnerOrTemplate])
 def optimized_machine_detail(request, machine_id):

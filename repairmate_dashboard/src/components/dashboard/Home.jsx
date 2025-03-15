@@ -7,6 +7,8 @@ import RecentActivity from './RecentActivity.jsx';
 import NotesAndReminders from './NotesAndReminders.jsx';
 import './Home.css';
 
+
+// The pop-up guide is blocked 
 {/*
 function QuickStartGuidePopup({ onClose }) {
   return (

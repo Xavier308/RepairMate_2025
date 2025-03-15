@@ -176,6 +176,7 @@ function EnhancedTroubleshoot() {
   if (loading) return <LoadingSpinner />;
   if (error) return <div className="error-message">{error}</div>;
 
+
   return (
     <div className="troubleshoot-container">
       <div className="troubleshoot-content">

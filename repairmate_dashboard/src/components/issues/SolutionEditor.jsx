@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { FaChevronDown, FaChevronUp, FaWrench, FaTrash } from 'react-icons/fa';
 
 import { 
-  updateSolution, getStepImages, deleteStepImage,
-  createGuide, createSolution, deleteSolution
+  updateSolution, getStepImages, deleteStepImage, createGuide, createSolution, deleteSolution
 } from '@/services/api';
 
 import ImageUploader from '@/components/common/ImageUploader.jsx';
 
+// Some comments are in Spanish - Needs to be change to English ***
 
 function SolutionEditor({ solutions, setSolutions, issueId }) {
   const [expandedSolutionId, setExpandedSolutionId] = useState(null);
@@ -91,7 +91,6 @@ function SolutionEditor({ solutions, setSolutions, issueId }) {
       </div>
     );
   };
-
 
 
   const handleAddSolution = async () => {

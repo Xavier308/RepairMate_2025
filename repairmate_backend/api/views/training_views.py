@@ -91,7 +91,7 @@ class TrainingWorkspaceViewSet(viewsets.ModelViewSet):
                 )
             
             # Delete the document and its associated file
-            document.file.delete(save=False)  # Deletes the physical file
+            document.file.delete(save=False)  # Deletes the digital file
             document.delete()  # Deletes the database record
             
             return Response(status=status.HTTP_204_NO_CONTENT)

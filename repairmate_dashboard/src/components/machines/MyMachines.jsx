@@ -1,8 +1,10 @@
+// machines/MyMachines.jsx
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaSearch, FaFilter, FaMagic, FaPlus, FaBookmark, FaLock, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { fetchMachines, getMachineImages, fetchDepartments, fetchMachineTypes } from '@/services/api';
 import './MyMachines.css';
+
 
 function MyMachines() {
   const navigate = useNavigate();
@@ -12,17 +14,14 @@ function MyMachines() {
   const [departments, setDepartments] = useState([]);
   const [machineTypes, setMachineTypes] = useState([]);
   const [expandedDescriptions, setExpandedDescriptions] = useState({});
-  
   // Search and filter state
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('');
   const [selectedType, setSelectedType] = useState('');
   const [activeTab, setActiveTab] = useState('my-machines');
-  
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const machinesPerPage = 9;
-
   // Lazy loading of images
   const loadMachineImage = useCallback(async (machine) => {
     try {

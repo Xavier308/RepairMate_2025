@@ -4,6 +4,7 @@ import { fetchMachineDetails, submitTroubleshootingRequest, fetchIssuesForMachin
 import { FaArrowUp, FaCog, FaMagic, FaBookmark, FaLock } from 'react-icons/fa';
 import './TroubleshootDetail.css';
 
+
 function TroubleshootDetail() {
     const { machineId } = useParams();
     const navigate = useNavigate();

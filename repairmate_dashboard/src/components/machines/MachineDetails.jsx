@@ -14,6 +14,7 @@ import {
 import ManualUploadHandler from '@/components/common/ManualUploadHandler.jsx';
 import './MachineDetails.css';
 
+// Some comments are in Spanish ***
 
 function MachineDetails() {
   const { id } = useParams();
@@ -36,7 +37,7 @@ function MachineDetails() {
       const detailsResponse = await fetchMachineDetails(id);
       if (detailsResponse.data) {
         const imagesResponse = await getMachineImages(id);
-        const imageUrl = imagesResponse.data.length > 0 ? imagesResponse.data[0].url : 'default_image_url_here'; // Asegúrate de tener una URL predeterminada
+        const imageUrl = imagesResponse.data.length > 0 ? imagesResponse.data[0].url : 'default_image_url_here'; // Asegurar tener una URL predeterminada
 
         try {
           const manualResponse = await getMachineManual(id);
@@ -102,8 +103,6 @@ function MachineDetails() {
   const handleTroubleshoot = () => {
     navigate(`/troubleshoot/${id}`);
   };
-
-
 
 
  const handleViewManual = async () => {
@@ -248,8 +247,6 @@ function MachineDetails() {
       setIsCopying(false);
     }
   };
-
-
 
 
   if (loading) return <div className="loading-message">Loading...</div>;

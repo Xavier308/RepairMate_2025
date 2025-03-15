@@ -1,5 +1,4 @@
-// EnhancedTraining.js
-
+// training/EnhancedTraining.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaPlus, FaFileUpload, FaTrash, FaEdit } from 'react-icons/fa';

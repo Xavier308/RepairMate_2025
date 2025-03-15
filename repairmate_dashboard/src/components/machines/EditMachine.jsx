@@ -8,6 +8,7 @@ import {
 import { FaTrash } from 'react-icons/fa';
 import './EditMachine.css';
 
+
 // Component for editing machine details
 function EditMachine() {
   const { id } = useParams(); // Gets the machine ID from the URL

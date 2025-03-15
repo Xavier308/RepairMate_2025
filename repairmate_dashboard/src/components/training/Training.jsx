@@ -1,6 +1,7 @@
 import React from 'react';
 import './Training.css';
 
+
 function Training() {
   return (
     <div className="training-container">

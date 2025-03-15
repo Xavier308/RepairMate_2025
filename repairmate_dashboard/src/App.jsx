@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { LanguageProvider } from '@/context/LanguageContext.jsx'; //New
+import { LanguageProvider } from '@/context/LanguageContext.jsx';
 import MainLayout from './layouts/MainLayout.jsx';
 import Header from '@/components/common/Header.jsx';
 import Sidebar from '@/components/common/Sidebar.jsx';
@@ -10,16 +10,16 @@ import Login from '@/components/auth/Login.jsx';
 // Main Pages
 import Home from '@/components/dashboard/Home.jsx';
 import MyMachines from '@/components/machines/MyMachines.jsx'
-import EnhancedTroubleshoot from '@/components/troubleshoooting/EnhancedTroubleshoot.jsx';
+import EnhancedTroubleshoot from '@/components/troubleshooting/EnhancedTroubleshoot.jsx';
 import EnhancedTraining from '@/components/training/EnhancedTraining.jsx';
 import Settings from '@/components/settings/Settings.jsx';
 import Account from '@/components/account/Account.jsx';
 // Adjacent pages
 import MachineDetails from '@/components/machines/MachineDetails.jsx';
-import TroubleshootDetail from '@/components/troubleshoooting/TroubleshootDetail.jsx';
+import TroubleshootDetail from '@/components/troubleshooting/TroubleshootDetail.jsx';
 import IssuePage from '@/components/issues/IssuePage.jsx';
-
-import TroubleshootGuide from '@/components/troubleshoooting/TroubleshootGuide.jsx';
+// Issues and machine
+import TroubleshootGuide from '@/components/troubleshooting/TroubleshootGuide.jsx';
 import PossibleIssues from '@/components/issues/PossibleIssues.jsx';
 import AllIssues from '@/components/issues/AllIssues.jsx';
 import AddMachine from '@/components/machines/AddMachine.jsx';
@@ -28,12 +28,11 @@ import ManageIssues from '@/components/issues/ManageIssues.jsx';
 import StepGuide from '@/components/issues/StepGuide.jsx';
 // Workspace
 import WorkspaceDetail from '@/components/workspace/WorkspaceDetail.jsx';
-// wizard
+// Customization Wizard - step by step machine creation
 import CustomizationWizard from '@/components/CustomizationWizard/CustomizationWizard.jsx';
-
-
 // CSS Style
 import './App.css';
+
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

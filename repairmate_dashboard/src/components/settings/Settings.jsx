@@ -3,6 +3,7 @@ import { fetchUserPreferences, updateUserPreferences } from '@/services/api';
 import { useLanguage } from '@/context/LanguageContext.jsx';
 import './Settings.css';
 
+
 function Settings() {
   const [preferences, setPreferences] = useState({
     email_notifications: true,
@@ -16,7 +17,7 @@ function Settings() {
   const [successMessage, setSuccessMessage] = useState('');
   const { setLanguage } = useLanguage(); // New
 
-  // Lista de zonas horarias comunes para América
+  // List of common Time Zones for America
   const commonTimezones = [
     { value: 'America/Puerto_Rico', label: 'Puerto Rico (AST)' },
     { value: 'America/New_York', label: 'Eastern Time (ET)' },

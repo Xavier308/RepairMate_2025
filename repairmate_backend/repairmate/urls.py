@@ -9,44 +9,37 @@ from django.conf.urls.static import static
 from django.views.static import serve
 import os
 
-# Definir la ruta del build de React/Vite si no está en settings
+# Defined Build's route of React/Vite if its'n present in settings.py
 REACT_BUILD_DIR = getattr(settings, 'VITE_APP_BUILD_DIR', 
                           os.path.join(settings.BASE_DIR, 'repairmate', 'static', 'react', 'build'))
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', include('core.urls')), # New line
+    # path('', include('core.urls')),
     path('api/', include('api.urls')),
 
     #path('', TemplateView.as_view(template_name='index.html'), name='react-app'),  # estaba funcionando
-    path('api-token-auth/', obtain_auth_token, name='api_token_auth'), # si la elimino  no me deja hacer loging (en api.url hay otra linea de esta)
-    # Serve the manifest.json
-    #re_path(r'^manifest\.json$', serve, {'document_root': settings.REACT_APP_DIR, 'path': 'manifest.json'}), # funciona bien
-    
-    # Do not use  this line, it doesnt let React render media/images
-    #Serve the index.html of React
-    #re_path(r'^.*', TemplateView.as_view(template_name='index.html'), name='react-app'), # this give problems 
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'), # Necessary for make loging (en api.url hay otra linea de esta)
 
-    #re_path(r"^media/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT,},),   #funciona bien
 
-    # Servir manifest.json (puede ser tanto de CRA como de Vite)
+    # Serve manifest.json (It can be CRA or Vite)
     re_path(r'^manifest\.json$', serve, {
         'document_root': REACT_BUILD_DIR, 
         'path': 'manifest.json'
     }),
     
-    # Servir archivos estáticos de Vite
+    # Serve static files of Vite
     re_path(r'^assets/(?P<path>.*)$', serve, {
         'document_root': os.path.join(REACT_BUILD_DIR, 'assets'),
     }),
     
-    # Servir .vite/manifest.json para debugging si es necesario
+    # Serve .vite/manifest.json for debugging if necessary
     re_path(r'^\.vite/manifest\.json$', serve, {
         'document_root': REACT_BUILD_DIR,
         'path': '.vite/manifest.json'
     }),
     
-    # Servir archivos multimedia
+    # Serve mulitmedia files
     re_path(r'^media/(?P<path>.*)$', serve, {
         'document_root': settings.MEDIA_ROOT,
     }),

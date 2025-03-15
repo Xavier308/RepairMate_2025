@@ -1,5 +1,4 @@
-// AllIssues.js
-
+// issues/AllIssues.js
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchIssuesForMachine, fetchMachineDetails } from '@/services/api';

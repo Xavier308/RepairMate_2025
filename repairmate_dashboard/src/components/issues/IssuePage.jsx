@@ -1,5 +1,5 @@
-// IssuePage.js lo dividimos en varios modulos para hacerlo mas manejable
-// Ahora son IssuePage + SolutionEditor + ImageUploader
+// IssuePage.js was divided into multiple modules to make it more manageable 
+// Now is IssuePage / SolutionEditor / ImageUploader
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { fetchIssueDetails, fetchIssueSolutions, updateIssue } from '@/services/api';

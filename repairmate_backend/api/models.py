@@ -11,6 +11,7 @@ from django.core.exceptions import ValidationError # New
 from django.utils import timezone
 import pytz
 
+
 # Defines the different subscription plans that a user or organization can have
 class SubscriptionPlan(models.Model):
     """Defines the different subscription plans available"""

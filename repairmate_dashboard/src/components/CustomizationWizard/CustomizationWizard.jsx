@@ -131,7 +131,7 @@ const CustomizationWizard = ({ open, machineId, onClose }) => {
 
       // 2. Create each issue and its solutions/guides
       for (const issue of issues) {
-        // Saltar issues vacíos
+        // skip empty issues
         if (!issue.title.trim()) continue;
 
         const issueResponse = await createIssue(machineId, {

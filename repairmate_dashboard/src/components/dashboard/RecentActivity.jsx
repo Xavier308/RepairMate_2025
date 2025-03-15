@@ -6,7 +6,7 @@ import {
   FaEye, FaCheckCircle, FaExclamationCircle 
 } from 'react-icons/fa';
 
-// Component to display an appropriate icon based on the activity type
+// Switch case to display an appropriate icon based on the activity type
 const ActivityIcon = ({ type }) => {
     switch (type) {
       case 'MACHINE_CREATE':
